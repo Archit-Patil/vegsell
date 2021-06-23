@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+def home(request):
+    return render(request, 'vegetables/home.html')
+
+def shopping(request):
+    return render(request, 'vegetables/shopping.html')

@@ -1,0 +1,493 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  
+
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="{% static 'vegetables/styles.css' %}" />
+  <title>Vegsell</title>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  
+    <nav class="nav">
+    <div class="wrapper container">
+      <div class="logo"><a href="">LOGO</a></div>
+      <ul class="nav-list">
+        <div class="top">
+          <label for="" class="btn close-btn"><i class="fas fa-times"></i></label>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li>
+          <a href="" class="desktop-item">Categories <span><i class="fas fa-chevron-down"></i></span></a>
+          <input type="checkbox" id="showMega" />
+          <label for="showMega" class="mobile-item">Categories <span><i class="fas fa-chevron-down"></i></span></label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              </div>
+
+              <div class="row">
+                <header>Categories</header>
+                <ul class="mega-links">
+                  <li><a href="#">Category1</a></li>
+                  <li><a href="#">Category2</a></li>
+                  <li><a href="#">Category3</a></li>
+                  <li><a href="#">Category4</a></li>
+                </ul>
+              </div>
+
+              <div class="row">
+                <header>Categories</header>
+                <ul class="mega-links">
+                  <li><a href="#">Category1</a></li>
+                  <li><a href="#">Category2</a></li>
+                  <li><a href="#">Category3</a></li>
+                  <li><a href="#">Category4</a></li>
+                </ul>
+              </div>
+
+              <div class="row">
+                <header>Categories</header>
+                <ul class="mega-links">
+                  <li><a href="#">Category1</a></li>
+                  <li><a href="#">Category2</a></li>
+                  <li><a href="#">Category3</a></li>
+                  <li><a href="#">Category4</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </li>
+        
+      </ul>
+      <label for="" class="btn open-btn"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+
+  <!-- PRODUCTS -->
+
+  <section class="section products">
+    <div class="products-layout container">
+      <div class="col-1-of-4">
+        <div>
+          <div class="block-title">
+            <h3>Category</h3>
+          </div>
+
+          <ul class="block-content">
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Category 1</span>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Category 2</span>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Category 3</span>
+              </label>
+            </li>
+
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                <span>Category 4</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-3-of-4">
+        <form action="">
+          <div class="item">
+            <label for="sort-by">Sort By</label>
+            <select name="sort-by" id="sort-by">
+              <option value="title" selected="selected">Name</option>
+              <option value="number">Price</option>
+              <option value="search_api_relevance">Relevance</option>
+              <option value="created">Newness</option>
+            </select>
+          </div>
+          <div class="item">
+            <label for="order-by">Order</label>
+            <select name="order-by" id="sort-by">
+              <option value="ASC" selected="selected">ASC</option>
+              <option value="DESC">DESC</option>
+            </select>
+          </div>
+          <a href="">Apply</a>
+        </form>
+
+        <div class="product-layout">
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="img-container">
+              <img src="{% static 'vegetables/potato.png' %}" alt="" />
+              <div class="addCart">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+
+              <ul class="side-icons">
+                <span><i class="far fa-heart"></i></span>
+              </ul>
+            </div>
+            <div class="bottom">
+              <a href="">Product Name</a>
+              <div class="price">
+                <span>Product Price</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <ul class="pagination">
+          <span>1</span>
+          <span>2</span>
+          <span class="icon">››</span>
+          <span class="last">Last »</span>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="section footer">
+    <div class="container">
+      <div class="footer-container">
+
+        <div class="footer-center">
+          <h3>INFORMATION</h3>
+          <a href="#">About Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Site Map</a>
+        </div>
+
+        <div class="footer-center">
+          <h3>CONTACT US</h3>
+          <div>
+            <span>
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            Address
+          </div>
+          <div>
+            <span>
+              <i class="far fa-envelope"></i>
+            </span>
+            email id
+          </div>
+          <div>
+            <span>
+              <i class="fas fa-phone"></i>
+            </span>
+            phone number
+          </div>
+          <div class="payment-methods">
+            <img src="{% static 'vegetables/payment.png' %}" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Custom Scripts -->
+  <script src="{% static 'vegetables/index.js' %}"></script>
+</body>
+
+</html>
