@@ -38,8 +38,8 @@
     <i class="fas fa-bars"></i>
     </label>
     <ul>
-       <li><a  href="#">Home</a></li>
-       <li><a  href="#">Category</a></li>
+       <li><a  href="{% url 'vegetables-home' %}">Home</a></li>
+       <li><a  href="{% url 'vegetables-shopping' %}">Category</a></li>
        <li><a href="#">About Us</a></li>
      <li><a  href="#">Cart</a></li>
      <li><a  href="#">Login/Sigup</a></li>
@@ -59,36 +59,38 @@
           <div class="block-title">
             <h3>Category</h3>
           </div>
-
           <ul class="block-content">
             <li>
               <input type="checkbox" name="" id="">
               <label for="">
-                <span>Category 1</span>
-              </label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Category 2</span>
-              </label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Category 3</span>
-              </label>
-            </li>
-
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">
-                <span>Category 4</span>
+                
+                <a href="/shopping">All</a>
               </label>
             </li>
           </ul>
+{% for category in categorys %}
+
+
+
+          
+          <ul class="block-content">
+            <li>
+              <input type="checkbox" name="" id="">
+              <label for="">
+                
+                <a href="?category={{category.id}}">{{category.name}}</a>
+              </label>
+            </li>
+          </ul>
+            {% endfor %}
+
+           
+           
+
+
+
+
+
         </div>
 
       </div>
@@ -114,293 +116,31 @@
         </form>
 
         <div class="product-layout">
-
+          {% for product in products %}
           <div class="product">
             <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
+              <img src="{{product.image.url}}" alt="" />
+  
+
+                <a href='/{{product.id}}/productdetail'class="fas fa-shopping-cart addCart"></a>
+             
+
+              
 
               <ul class="side-icons">
                 <span><i class="far fa-heart"></i></span>
               </ul>
             </div>
             <div class="bottom">
-              <a href="">Product Name</a>
+              <a href="">{{product.name}}</a>
               <div class="price">
-                <span>Product Price</span>
+                <span>{{product.price}}</span>
               </div>
             </div>
           </div>
 
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="img-container">
-              <img src="{% static 'vegetables/potato.png' %}" alt="" />
-              <div class="addCart">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-
-              <ul class="side-icons">
-                <span><i class="far fa-heart"></i></span>
-              </ul>
-            </div>
-            <div class="bottom">
-              <a href="">Product Name</a>
-              <div class="price">
-                <span>Product Price</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
+          
+            {% endfor %}
 
         <!-- PAGINATION -->
         <ul class="pagination">
