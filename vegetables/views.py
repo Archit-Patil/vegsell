@@ -6,6 +6,9 @@ def home(request):
     products = Product.get_all_products()
     return render(request, 'vegetables/home.html',{'products':products})
 
+def about(request):
+    return render(request, 'vegetables/about.html')
+
 def shopping(request):
     products = None
 
@@ -24,10 +27,6 @@ def shopping(request):
 
 
 def productdetail(request,id):
-   
-
-    
-    
     products = Product.objects.get(id=id)
     data = {}
     data['products'] = products

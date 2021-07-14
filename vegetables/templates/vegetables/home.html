@@ -44,9 +44,14 @@
             <li><a  href="">Home</a></li>
             <li><a  href="{% url 'vegetables-shopping' %}">Category</a></li>
             
-            <li><a href="#">About Us</a></li>
+            <li><a href="{% url 'vegetables-about' %}">About Us</a></li>
           <li><a  href="#">Cart</a></li>
-          <li><a  href="#">Login/Sigup</a></li>
+          {% if user.is_authenticated %}
+          <li><a  href="{% url 'vegetables-logout' %}">Logout</a></li>
+          {% else %}
+          <li><a  href="{% url 'vegetables-login' %}">Login</a></li>
+          <li><a  href="{% url 'vegetables-register' %}">Sigup</a></li>
+          {% endif %}
           
          
           
