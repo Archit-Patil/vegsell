@@ -6,17 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" type="text/css" href="{% static 'vegetables/about.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vegetables/home.css' %}"/>
 </head>
 <body>
+
+    <nav>
+        <div class="logo">
+           Brand
+        </div>
+        <form action="/action_page.php">
+         <input class='searchbar'type="text" placeholder="" name="search">
+         <button id='searchicon'type="submit"><i class="fa fa-search"></i></button>
+       </form>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+           <li><a  href="{% url 'vegetables-home' %}">Home</a></li>
+           <li><a  href="{% url 'vegetables-shopping' %}">Category</a></li>
+           
+           <li><a href="{% url 'vegetables-about' %}">About Us</a></li>
+         <li><a  href="#">Cart</a></li>
+         {% if user.is_authenticated %}
+         <li><a  href="{% url 'vegetables-logout' %}">Logout</a></li>
+         {% else %}
+         <li><a  href="{% url 'vegetables-login' %}">Login</a></li>
+         <li><a  href="{% url 'vegetables-register' %}">Sigup</a></li>
+         {% endif %}
+         </ul>
+     </nav>
+
     <div class="section">
         <div class="container">
             <div class="content-section">
                 <div class="title">
                     <h1>About us</h1>
                 </div>
-                <div class="content">
+                <div class="content description">
                     <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, porro.</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam dolores totam commodi incidunt voluptas laboriosam nulla voluptatum asperiores maxime, blanditiis veritatis ducimus atque nam delectus ullam illo at ipsa officia fuga, non quia! Aperiam velit delectus numquam perferendis consequatur incidunt hic. Odio provident asperiores quisquam, sed maxime quis dolorem, similique enim sequi, quas voluptatum adipisci at ipsam recusandae! Tempore illum doloremque sapiente possimus rerum ex accusamus, sunt quod consequuntur commodi, corrupti facilis est fugiat necessitatibus saepe amet, id similique quibusdam quia ipsam? Iste, numquam recusandae velit consequatur voluptatum amet officia doloribus. Fugiat omnis libero provident veritatis, excepturi sapiente reiciendis temporibus!</p>
                 <div class="button">
@@ -31,9 +62,15 @@
                 </div>
             </div>
             <div class="image-section">
-            <img src="bg-101.jpg">
+            <img src="{% static 'bg-101.jpg'%}">
         </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+
 </body>
 </html>

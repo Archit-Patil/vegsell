@@ -15,11 +15,16 @@
             </div>
             <nav>
                 <ul id='MenuItems'>
-                    <li><a href='#'>Home</a></li>
-                    <li><a href='#'>About Us</a></li>
-                    <li><a href='#'>Services</a></li>
-                    <li><a href='#'>Contact</a></li>
-                    <li><button class='loginbtn' onclick="document.getElementById('login-           form').style.display='block'" style="width:auto;">Login</button></li>
+                    <li><a href="{% url 'vegetables-home' %}">Home</a></li>
+                    <li><a href="{% url 'vegetables-about' %}">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a  href="{% url 'vegetables-shopping' %}">Category</a></li>
+                    {% if user.is_authenticated %}
+                    <li><a  href="{% url 'vegetables-logout' %}">Logout</a></li>
+                    {% else %}
+                    <li><a  href="{% url 'vegetables-login' %}">Login</a></li>
+                    {% endif %}
+                    <!-- <li><button class='loginbtn' onclick="document.getElementById('login-           form').style.display='block'" style="width:auto;">Login</button></li> -->
                 </ul>
             </nav>
         </div>
